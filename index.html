@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Altus - Electron-based desktop WhatsApp client</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cocoen.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="header">
+            <div class="header-title">
+                <h1 class="title">Altus</h1>
+            </div>
+            <div class="subheader">
+                <ul class="navigation">
+                    <li class="nav-item">
+                        <a id="nav-home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-features" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-download" class="nav-link">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content" id="main-content">
+            <div class="current-version-group group">
+                <p class="current-version-text">Current Stable Version:</p>
+                <p class="current-version"><span class="version"></span></p>
+            </div>
+            <div class="github-info-group group">
+                <div class="visit-git-repo">
+                    <div class="button" id="visit-git">
+                        <i class="fab fa-github"></i> Visit Repository on GitHub
+                    </div>
+                </div>
+            </div>
+            <div class="features-group group">
+                <div class="features-title">
+                    <h2 class="title">Features</h2>
+                </div>
+                <div class="dark-theme-group group">
+                    <div class="dark-theme-title">
+                        <h3 class="title">Dark Theme</h3>
+                    </div>
+                    <div class="dark-theme-body">
+                        <div class="cocoen">
+                            <img src="./img/altus.png" alt="Altus">
+                            <img src="./img/altus-dark-mode.png" alt="Altus Dark Mode">
+                        </div>
+                        <div class="dark-theme-description">
+                            <p>Altus comes with an inbuilt dark theme which you can toggle on/off at your convenience. The dark theme provided is a courtesy of <a href="https://github.com/vednoc/onyx" class="link">vednoc</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-theme-group group">
+                    <div class="custom-theme-title">
+                        <h3 class="title">Custom Themes</h3>
+                    </div>
+                    <div class="custom-theme-body">
+                        <div class="custom-theme-screenshot">
+                            <img src="./img/altus-custom-theme.png" alt="Altus Custom Theme Option">
+                        </div>
+                        <div class="custom-theme-description">
+                            <p>If you are skilled at CSS, you can also write your own themes or use themes provided by other people.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="notifications-group group">
+                    <div class="notifications-title">
+                        <h3 class="title">Notifications</h3>
+                    </div>
+                    <div class="notifications-body">
+                        <p>Get native notifications on all the platforms including Windows (7 or higher), Linux and MacOS.</p>
+                    </div>
+                </div>
+                <div class="tray-support-group group">
+                    <div class="tray-support-title">
+                        <h3 class="title">Tray Support</h3>
+                    </div>
+                    <div class="tray-support-body">
+                        <p>Tray icon support so you can minimize the app completely and still get notified.</p>
+                    </div>
+                </div>
+                <div class="platforms-group group">
+                    <div class="platforms-title">
+                        <h3 class="title">Available for all major platforms</h3>
+                    </div>
+                    <div class="platforms-body">
+                        <div class="windows-platform platform">
+                            <i class="fab fa-windows"></i>
+                            <span>Windows</span>
+                        </div>
+                        <div class="mac-platform platform">
+                            <i class="fab fa-apple"></i>
+                            <span>MacOS</span>
+                        </div>
+                        <div class="linux-platform platform">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="downloads-group group">
+                <div class="downloads-title">
+                    <h2 class="title">Downloads</h2>
+                </div>
+                <div class="windows-group group">
+                    <div class="windows-title">
+                        <h3 class="title">Windows</h3>
+                    </div>
+                    <div class="windows-download">
+                        <div class="button" id="windows-download">
+                            <i class="fab fa-windows"></i> Download <span class="version"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="linux-group group">
+                    <div class="linux-title">
+                        <h3 class="title">Linux</h3>
+                    </div>
+                    <div class="linux-download">
+                        <div class="button" id="linux-download-deb">
+                            <i class="fab fa-linux"></i> Download <span class="version"></span> (.deb)
+                        </div>
+                        <div class="button" id="linux-download-appimage">
+                            <i class="fab fa-linux"></i> Download <span class="version"></span> (.AppImage)
+                        </div>
+                    </div>
+                </div>
+                <div class="macos-group group">
+                    <div class="macos-title">
+                        <h3 class="title">MacOS</h3>
+                    </div>
+                    <div class="macos-download">
+                        <div class="button" id="macos-download">
+                            <i class="fab fa-apple"></i> Download <span class="version"></span> (.deb)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/cocoen.min.js"></script>
+    <script src="./js/main.js "></script>
+</body>
+
+</html>
